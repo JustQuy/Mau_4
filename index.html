@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hitek – Mẫu giống hình</title>
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <!-- Font cho cảm giác giống ảnh mẫu -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
     <div class="container header-top">
       <!-- image1: logo -->
       <a class="logo" href="#" aria-label="Hitek Home">
-        <img src="image1.jpg" alt="HITEK">
+        <img src="image1.png" alt="HITEK">
       </a>
 
       <nav class="nav-primary" aria-label="Menu chính">
@@ -55,8 +55,8 @@
 
   <!-- ================= BANNER ================= -->
   <div class="container banner">
-    <!-- image2: banner ngang -->
-    <img src="image2.jpg" alt="Banner quảng cáo">
+    <!-- image2: banner ngang (dùng .png theo bộ ảnh bạn đang có) -->
+    <img src="image2.png" alt="Banner quảng cáo">
   </div>
 
   <!-- ================= FEATURED GRID ================= -->
@@ -72,9 +72,10 @@
       </div>
     </article>
 
-    <!-- Phải: 4 ô nhỏ 4:3 -->
+    <!-- Phải: HÀNG TRÊN 1 ô, HÀNG DƯỚI 2 ô -->
     <div class="featured-right">
-      <div class="row2">
+      <!-- Hàng trên: 1 ô duy nhất -->
+      <div class="row1">
         <!-- image4 -->
         <article class="card card-sm">
           <img src="image4.jpg" alt="Danh sách các tuyển thủ góp mặt vòng Play-In và vòng bảng tại MSI 2019">
@@ -83,32 +84,25 @@
             <h4>Danh sách các tuyển thủ góp mặt trong vòng Play-In và vòng bảng tại MSI 2019</h4>
           </div>
         </article>
-
-        <!-- DÙNG LẠI image4 (không có image5) -->
-        <article class="card card-sm">
-          <img src="image4.jpg" alt="Tin MSI liên quan">
-          <div class="overlay"></div>
-          <div class="meta">
-            <h4>Và các thông tin MSI đáng chú ý khác</h4>
-          </div>
-        </article>
       </div>
 
+      <!-- Hàng dưới: 2 ô -->
       <div class="row2">
         <!-- image6 -->
         <article class="card card-sm">
-          <img src="image6.jpg" alt="Levi và JDG với loạt pha xử lý ấn tượng dương kim vô địch KCTG">
+          <img src="image6.jpg" alt="Levi và JDG với loạt pha xử lý ấn tượng">
           <div class="overlay"></div>
           <div class="meta">
-            <h4>Xuất hiện lối ngụy trang mới: Levi và JDG vô địch LPL trước đường kim vô địch KCTG IG?</h4>
+            <h4>Xuất hiện lối ngụy trang mới: Levi và JDG vô địch LPL trước IG?</h4>
           </div>
         </article>
+
         <!-- image7 -->
         <article class="card card-sm">
-          <img src="image7.jpg" alt="Kieu Anh Hera">
+          <img src="image7.jpg" alt="Kiều Anh Hera">
           <div class="overlay"></div>
           <div class="meta">
-            <h4>Bỏ lại quá khứ chia tay, Kiều Anh Hera giờ đã chuyển qua kinh doanh lẫn game chỉ là thú vui?</h4>
+            <h4>Kiều Anh Hera chuyển qua kinh doanh, game chỉ là thú vui?</h4>
           </div>
         </article>
       </div>
@@ -131,7 +125,7 @@
         </div>
       </article>
 
-      <!-- Tin 2: DÙNG LẠI image11 (không có image9) -->
+      <!-- Tin 2: dùng lại image11 (không có image9) -->
       <article class="news-item">
         <a class="thumb" href="#"><img src="image11.jpg" alt="Tamamo no Mae cosplay"></a>
         <div class="news-body">
@@ -177,7 +171,7 @@
 
       <!-- Quảng cáo dọc: image12 -->
       <div class="ad-rect">
-        <img src="image12.jpg" alt="Quảng cáo dọc">
+        <img src="image12.png" alt="Quảng cáo dọc">
       </div>
     </aside>
   </main>
@@ -204,17 +198,17 @@
     <div class="copy">©2025 All rights reserved</div>
   </footer>
 
-  <!-- =========== Ghi chú ảnh đang dùng (11 tấm) ===========
-      image1.jpg  -> logo (H.jpg)
-      image2.jpg  -> banner ngang (C.jpg)
-      image3.jpg  -> featured lớn (I.jpg)
-      image4.jpg  -> featured nhỏ trên-trái (K.jpg) + DÙNG LẠI cho trên-phải (không có image5)
-      image6.jpg  -> featured nhỏ dưới-trái (G.jpg)
-      image7.jpg  -> featured nhỏ dưới-phải (F.jpg)
-      image8.jpg  -> Tin 1 (E.jpg)
-      image10.jpg -> Tin 3 (B.jpg)
-      image11.jpg -> Tin 2 & Tin 4 (D.jpg, dùng lại cho Tin 2, không có image9)
-      image12.jpg -> Quảng cáo dọc (A.jpg)
-  ========================================================== -->
+  <!-- =========== Ghi chú ảnh đang dùng (11 tấm, không cần image5 & image9) ===========
+      image1.png  -> logo
+      image2.png  -> banner ngang
+      image3.jpg  -> featured lớn
+      image4.jpg  -> featured-right HÀNG TRÊN (1 ô)
+      image6.jpg  -> featured-right HÀNG DƯỚI (trái)
+      image7.jpg  -> featured-right HÀNG DƯỚI (phải)
+      image8.jpg  -> Tin 1
+      image10.jpg -> Tin 3
+      image11.jpg -> Tin 2 & Tin 4 (dùng lại)
+      image12.png -> Quảng cáo dọc
+  ================================================================================ -->
 </body>
 </html>
