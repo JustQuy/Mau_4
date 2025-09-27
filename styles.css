@@ -77,8 +77,8 @@ body{
   height: auto;
 
   /* Căn giữa theo trục trái–phải bằng margin */
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  margin-right: 90px;
 
   border-radius: 6px;        /* bo góc đồng bộ thanh cam */
   /* (Tuỳ chọn) nếu cần crop giữ giữa khi bạn muốn khung cố định:
