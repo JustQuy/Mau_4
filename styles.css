@@ -59,37 +59,24 @@ body{
   border:1px solid rgba(0,0,0,.08)
 }
 
-/* ======= BANNER (khớp mép với thanh cam, center bằng margin) ======= */
+/* ======= BANNER (thẳng mép với thanh cam & ở giữa) ======= */
 .banner{
-  margin: 14px 0 20px;  /* khoảng cách trên/dưới */
+  margin: 14px 0 20px;
 }
-
-/* Giữ gutter 14px mỗi bên như thanh cam */
-.container.banner{
+.container.banner{           /* dùng đúng gutter như thanh cam */
   padding-left: 14px;
   padding-right: 14px;
 }
-
 .banner img{
   display: block;
-  width: 970px;              /* rộng desktop mong muốn */
-  max-width: 100%;           /* tự co trên màn nhỏ */
-  height: auto;
-
-  /* Căn giữa theo trục trái–phải bằng margin */
-  margin-left: 20px;
-  margin-right: 90px;
-
-  border-radius: 6px;        /* bo góc đồng bộ thanh cam */
-  /* (Tuỳ chọn) nếu cần crop giữ giữa khi bạn muốn khung cố định:
-  aspect-ratio: 970 / 250;
+  width: 100%;              /* phủ ngang giống header-bar-inner */
+  height: auto;             /* giữ tỉ lệ ảnh */
+  border-radius: 6px;       /* bo góc trùng thanh cam */
+  aspect-ratio: 970 / 250;  /* giữ tỉ lệ banner */
   object-fit: cover;
-  object-position: center;
-  */
+  object-position: center;  /* crop giữa khi cần */
   box-shadow: 0 10px 18px rgba(0,0,0,.05);
 }
-
-
 
 /* ======= FEATURED ======= */
 .featured{
@@ -164,7 +151,3 @@ body{
   .news-item{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
 }
-
-
-
-
