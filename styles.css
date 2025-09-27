@@ -63,20 +63,22 @@ body{
 .banner{
   margin: 14px 0 20px;
 }
-.container.banner{           /* dùng đúng gutter như thanh cam */
-  padding-left: 14px;
-  padding-right: 14px;
+/* Loại bỏ padding thừa, margin trên */
+.container.banner {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto 20px; /* margin-bottom giữ khoảng cách với section tiếp theo */
 }
-.banner img{
+
+/* Ảnh banner full width và giữ tỉ lệ */
+.banner img {
+  width: 100%;
+  height: auto;
   display: block;
-  width: 100%;              /* phủ ngang giống header-bar-inner */
-  height: auto;             /* giữ tỉ lệ ảnh */
-  border-radius: 6px;       /* bo góc trùng thanh cam */
-  aspect-ratio: 970 / 250;  /* giữ tỉ lệ banner */
+  border-radius: 6px;  /* giữ bo góc nếu muốn */
   object-fit: cover;
-  object-position: center;  /* crop giữa khi cần */
-  box-shadow: 0 10px 18px rgba(0,0,0,.05);
 }
+
 
 /* ======= FEATURED ======= */
 .featured{
