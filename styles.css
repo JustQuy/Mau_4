@@ -146,16 +146,6 @@ body{
   .news-item{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
 }
-/* ==== FORCE CENTER BANNER ==== */
-/* 1) Cha thành flex và canh giữa */
-.banner,
-.hero-banner,
-.container.banner {
-  display: flex !important;
-  justify-content: center !important;
-  margin: 14px 0 20px !important;
-}
-
 /* ==== MOBILE-CENTER BANNER (force) ==== */
 
 /* 1) Luôn dùng flex + canh giữa ở mọi kích thước */
@@ -197,5 +187,7 @@ body{
     max-width: calc(100vw - 28px) !important; /* trừ đi “gutter” 14px mỗi bên */
   }
 }
+
+
 
 
