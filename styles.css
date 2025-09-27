@@ -156,16 +156,46 @@ body{
   margin: 14px 0 20px !important;
 }
 
-/* 2) Ảnh banner: cố định bề rộng “mockup”, co lại trên màn nhỏ, luôn nằm giữa */
-.banner img,
-.hero-banner img,
-.container.banner img {
-  display: block !important;
-  width: 970px !important;     /* chỉnh số này theo đúng kích thước banner của bạn */
-  max-width: 100% !important;  /* tự co trên màn nhỏ */
-  height: auto !important;
-  margin: 0 auto !important;   /* fallback khi không dùng flex */
-  border-radius: 10px;
-  box-shadow: 0 10px 18px rgba(0,0,0,.05);
+/* ==== MOBILE-CENTER BANNER (force) ==== */
+
+/* 1) Luôn dùng flex + canh giữa ở mọi kích thước */
+.container.banner,
+.hero-banner {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 14px 0 20px !important;
 }
+
+/* 2) Ảnh banner: không bị kéo full 100% cố định, luôn nằm giữa */
+.container.banner img,
+.hero-banner img {
+  display: block !important;
+  float: none !important;
+  margin: 0 auto !important;
+  width: 970px !important;      /* kích thước “mockup” */
+  max-width: 100% !important;   /* tự co khi màn nhỏ */
+  height: auto !important;
+  object-fit: cover;
+  object-position: center center; /* crop đúng giữa nếu cần */
+  border-radius: 10px;
+}
+
+/* 3) Trường hợp màn nhỏ: bảo đảm vẫn giữa tuyệt đối */
+@media (max-width: 640px) {
+  /* nếu container có padding gây cảm giác lệch, cho wrapper tự giữa theo viewport */
+  .container.banner,
+  .hero-banner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .container.banner img,
+  .hero-banner img {
+    /* đảm bảo ảnh không bị ép dính trái bởi rule width:100% từ nơi khác */
+    width: auto !important;
+    max-width: calc(100vw - 28px) !important; /* trừ đi “gutter” 14px mỗi bên */
+  }
+}
+
 
