@@ -60,9 +60,18 @@ body{
 }
 
 /* ======= BANNER ======= */
-.banner{margin:14px 0 20px}
-.banner img{width:100%;aspect-ratio:16/4.6;object-fit:cover;border-radius:10px;box-shadow:0 10px 18px rgba(0,0,0,.05)}
-
+.banner{
+  margin:14px 0 20px;
+}
+.banner img{
+  display:block;
+  width:100%;                 /* phủ hết bề ngang container */
+  aspect-ratio: 970 / 250;    /* gần với ảnh mẫu */
+  object-fit:cover;           /* cắt cho vừa khung */
+  object-position:center;     /* canh giữa nội dung ảnh khi bị crop */
+  border-radius:10px;
+}
+``
 /* ======= FEATURED ======= */
 .featured{
   display:grid;grid-template-columns:2.1fr 1.2fr;gap:18px
