@@ -160,26 +160,5 @@ body{
 }
 
 
-/* ===== Banner thẳng mép với thanh cam ===== */
-.container.banner{
-  /* .container vốn có padding 0 14px; 
-     nếu trước đây bạn từng set 0, ta ép về đúng 14px để trùng thanh cam */
-  padding-left: 14px !important;
-  padding-right: 14px !important;
-
-  /* bỏ mọi flex/center từng dùng trước đây để tránh xô lệch */
-  display: block !important;
-  margin: 14px 0 20px !important;
-}
-
-.container.banner img{
-  display: block;
-  width: 100%;              /* dài đúng bằng phần cam */
-  height: auto;
-  border-radius: 6px;       /* bo góc bằng thanh cam */
-  /* nếu ảnh không đúng tỉ lệ muốn, dùng 2 dòng dưới để crop giữa:
-  aspect-ratio: 970 / 250;
-  object-fit: cover; object-position: center; */
-}
 
 
