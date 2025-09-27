@@ -59,20 +59,28 @@ body{
   border:1px solid rgba(0,0,0,.08)
 }
 
-/* Center ngang (trục trái-phải) cho banner */
+/* ======= BANNER (khớp mép với thanh cam) ======= */
 .banner{
-  display: flex;              /* dùng flex để canh giữa phần tử con */
-  justify-content: center;    /* GIỮA THEO NGANG */
-  margin: 14px 0 20px;
+  margin: 14px 0 20px;      /* khoảng cách trên/dưới */
+  /* KHÔNG dùng flex/center ở đây để không lệch so với .container */
+}
+
+/* .container đã có padding 0 14px; thêm dòng dưới để chắc chắn trùng gutter */
+.container.banner{
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .banner img{
   display: block;
-  width: 970px;               /* rộng “desktop” mong muốn; đổi số nếu cần */
-  max-width: 100%;            /* tự co trên màn nhỏ */
-  height: auto;
-  margin: 0 auto;             /* fallback nếu flex bị override */
-  float: none;                 /* phòng trường hợp bị float trái */
+  width: 100%;              /* dài đúng bằng phần cam (header-bar-inner) */
+  height: auto;             /* giữ tỉ lệ ảnh */
+  border-radius: 6px;       /* bo góc trùng thanh cam */
+  /* nếu ảnh không đúng tỉ lệ mong muốn, bật crop giữa: */
+  aspect-ratio: 970 / 250;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 10px 18px rgba(0,0,0,.05);
 }
 
 
