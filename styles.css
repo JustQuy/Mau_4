@@ -146,3 +146,26 @@ body{
   .news-item{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
 }
+/* ==== FORCE CENTER BANNER ==== */
+/* 1) Cha thành flex và canh giữa */
+.banner,
+.hero-banner,
+.container.banner {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 14px 0 20px !important;
+}
+
+/* 2) Ảnh banner: cố định bề rộng “mockup”, co lại trên màn nhỏ, luôn nằm giữa */
+.banner img,
+.hero-banner img,
+.container.banner img {
+  display: block !important;
+  width: 970px !important;     /* chỉnh số này theo đúng kích thước banner của bạn */
+  max-width: 100% !important;  /* tự co trên màn nhỏ */
+  height: auto !important;
+  margin: 0 auto !important;   /* fallback khi không dùng flex */
+  border-radius: 10px;
+  box-shadow: 0 10px 18px rgba(0,0,0,.05);
+}
+
